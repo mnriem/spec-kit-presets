@@ -1,0 +1,111 @@
+schema_version: "1.0"
+
+preset:
+  id: "pirate-full-preset"
+  name: "Pirate Speak (Full)"
+  version: "1.0.0"
+  description: "Arrr! Transforms all Spec Kit output into pirate speak. Specs, plans, and tasks be written fer scallywags."
+  author: "mnriem"
+  repository: "https://github.com/mnriem/spec-kit-presets"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=0.1.0"
+
+provides:
+  templates:
+    - type: "template"
+      name: "spec-template"
+      file: "templates/spec-template.md"
+      description: "Feature specification template written in pirate speak"
+      replaces: "spec-template"
+
+    - type: "template"
+      name: "plan-template"
+      file: "templates/plan-template.md"
+      description: "Implementation plan template written in pirate speak"
+      replaces: "plan-template"
+
+    - type: "template"
+      name: "tasks-template"
+      file: "templates/tasks-template.md"
+      description: "Task list template written in pirate speak"
+      replaces: "tasks-template"
+
+    - type: "template"
+      name: "checklist-template"
+      file: "templates/checklist-template.md"
+      description: "Checklist template written in pirate speak"
+      replaces: "checklist-template"
+
+    - type: "template"
+      name: "constitution-template"
+      file: "templates/constitution-template.md"
+      description: "The Pirate Code — project constitution in pirate speak"
+      replaces: "constitution-template"
+
+    - type: "template"
+      name: "agent-file-template"
+      file: "templates/agent-file-template.md"
+      description: "Agent file template written in pirate speak"
+      replaces: "agent-file-template"
+
+    - type: "command"
+      name: "speckit.specify"
+      file: "commands/speckit.specify.md"
+      description: "Specify command that instructs the AI to write all output in pirate speak"
+      replaces: "speckit.specify"
+
+    - type: "command"
+      name: "speckit.plan"
+      file: "commands/speckit.plan.md"
+      description: "Plan command — chart the battle plan in pirate speak"
+      replaces: "speckit.plan"
+
+    - type: "command"
+      name: "speckit.tasks"
+      file: "commands/speckit.tasks.md"
+      description: "Tasks command — assign the crew in pirate speak"
+      replaces: "speckit.tasks"
+
+    - type: "command"
+      name: "speckit.checklist"
+      file: "commands/speckit.checklist.md"
+      description: "Checklist command — run a ship's inspection in pirate speak"
+      replaces: "speckit.checklist"
+
+    - type: "command"
+      name: "speckit.clarify"
+      file: "commands/speckit.clarify.md"
+      description: "Clarify command — interrogate the voyage manifest in pirate speak"
+      replaces: "speckit.clarify"
+
+    - type: "command"
+      name: "speckit.analyze"
+      file: "commands/speckit.analyze.md"
+      description: "Analyze command — inspect the fleet fer consistency in pirate speak"
+      replaces: "speckit.analyze"
+
+    - type: "command"
+      name: "speckit.implement"
+      file: "commands/speckit.implement.md"
+      description: "Implement command — begin the plunderin' in pirate speak"
+      replaces: "speckit.implement"
+
+    - type: "command"
+      name: "speckit.constitution"
+      file: "commands/speckit.constitution.md"
+      description: "Constitution command — draft the Pirate Code in pirate speak"
+      replaces: "speckit.constitution"
+
+    - type: "command"
+      name: "speckit.taskstoissues"
+      file: "commands/speckit.taskstoissues.md"
+      description: "Tasks-to-issues command — file crew assignments at the GitHub port in pirate speak"
+      replaces: "speckit.taskstoissues"
+
+tags:
+  - "fun"
+  - "pirate"
+  - "language"
+  - "personality"
