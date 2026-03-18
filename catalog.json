@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-03-18T00:00:00Z",
+  "catalog_url": "https://raw.githubusercontent.com/mnriem/spec-kit-presets/main/catalog.json",
+  "presets": {
+    "pirate": {
+      "name": "Pirate Speak (Full)",
+      "id": "pirate",
+      "version": "1.0.0",
+      "description": "Arrr! Transforms all Spec Kit output into pirate speak. Specs, plans, and tasks be written fer scallywags.",
+      "author": "mnriem",
+      "repository": "https://github.com/mnriem/spec-kit-presets",
+      "download_url": "https://github.com/mnriem/spec-kit-presets/releases/download/pirate-v1.0.0/pirate.zip",
+      "homepage": "https://github.com/mnriem/spec-kit-presets",
+      "documentation": "https://github.com/mnriem/spec-kit-presets/blob/main/pirate/README.md",
+      "license": "MIT",
+      "requires": {
+        "speckit_version": ">=0.1.0"
+      },
+      "provides": {
+        "templates": 6,
+        "commands": 9
+      },
+      "tags": [
+        "pirate",
+        "theme",
+        "fun",
+        "experimental"
+      ]
+    }
+  }
+}
