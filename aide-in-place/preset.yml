@@ -1,0 +1,82 @@
+schema_version: "1.0"
+
+preset:
+  id: "aide-in-place"
+  name: "AIDE In-Place Migration"
+  version: "1.0.0"
+  description: "Adapts the AIDE workflow for in-place technology migrations (X → Y pattern). Overrides vision, roadmap, progress, and work item commands with migration-specific guidance."
+  author: "mnriem"
+  repository: "https://github.com/mnriem/spec-kit-presets"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=0.2.0"
+  extensions:
+    - aide
+
+provides:
+  templates:
+    - type: "template"
+      name: "migration-knowledge-template"
+      file: "templates/migration-knowledge-template.md"
+      description: "Template for creating technology migration knowledge documents (API mappings, breaking changes, configuration changes)"
+
+    - type: "template"
+      name: "docs-structure"
+      file: "templates/docs-structure.md"
+      description: "AIDE document structure reference extended with migration-specific directories and documents"
+      replaces: "docs-structure"
+
+  commands:
+    - type: "command"
+      name: "speckit.aide.create-knowledge"
+      file: "commands/create-knowledge.md"
+      description: "Generate a migration knowledge document with API mappings, breaking changes, and configuration differences for a specific X → Y migration"
+
+    - type: "command"
+      name: "speckit.aide.create-vision"
+      file: "commands/create-vision.md"
+      description: "Create or update the vision document with migration objectives, scope, and risk assessment (X → Y)"
+      replaces: "speckit.aide.create-vision"
+
+    - type: "command"
+      name: "speckit.aide.create-roadmap"
+      file: "commands/create-roadmap.md"
+      description: "Create or extend the roadmap with incremental, verifiable migration stages and verification gates"
+      replaces: "speckit.aide.create-roadmap"
+
+    - type: "command"
+      name: "speckit.aide.create-progress"
+      file: "commands/create-progress.md"
+      description: "Update the progress file with migration component tracking using [MIGRATION X→Y] tags"
+      replaces: "speckit.aide.create-progress"
+
+    - type: "command"
+      name: "speckit.aide.create-queue"
+      file: "commands/create-queue.md"
+      description: "Generate a prioritized queue of the next batch of migration work items"
+      replaces: "speckit.aide.create-queue"
+
+    - type: "command"
+      name: "speckit.aide.create-item"
+      file: "commands/create-item.md"
+      description: "Create migration-specific work items with knowledge documents, API mappings, and behavioral equivalence criteria"
+      replaces: "speckit.aide.create-item"
+
+    - type: "command"
+      name: "speckit.aide.execute-item"
+      file: "commands/execute-item.md"
+      description: "Implement a migration work item with behavioral equivalence verification and rollback readiness"
+      replaces: "speckit.aide.execute-item"
+
+    - type: "command"
+      name: "speckit.aide.feedback-loop"
+      file: "commands/feedback-loop.md"
+      description: "Analyze migration issues and suggest improvements to the process, documents, and knowledge base"
+      replaces: "speckit.aide.feedback-loop"
+
+tags:
+  - migration
+  - in-place
+  - brownfield
+  - aide
