@@ -17,6 +17,7 @@ terminology, and structure without changing any tooling.
 
 | Preset | Description |
 |--------|-------------|
+| [aide-in-place](./aide-in-place/) | Adapts the AIDE extension workflow for in-place technology migrations (X → Y pattern) — adds migration objectives, verification gates, knowledge documents, and behavioral equivalence criteria |
 | [pirate](./pirate/) | Transforms all spec-kit output into pirate speak — specs become "Voyage Manifests", plans become "Battle Plans", tasks become "Crew Assignments" |
 
 ## Forking
