@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-03-18T00:00:00Z",
+  "updated_at": "2026-05-29T00:00:00Z",
   "catalog_url": "https://raw.githubusercontent.com/mnriem/spec-kit-presets/main/catalog.json",
   "presets": {
     "pirate": {
@@ -52,6 +52,31 @@
         "in-place",
         "brownfield",
         "aide"
+      ]
+    },
+    "copilot-sub-agents": {
+      "name": "Copilot Sub-Agent Delegation",
+      "id": "copilot-sub-agents",
+      "version": "1.0.0",
+      "description": "Adds sub-agent delegation instructions to all core Spec Kit commands, enabling parallel execution of independent steps via Copilot sub-agents (CLI and VS Code).",
+      "author": "mnriem",
+      "repository": "https://github.com/mnriem/spec-kit-presets",
+      "download_url": "https://github.com/mnriem/spec-kit-presets/releases/download/copilot-sub-agents-v1.0.0/copilot-sub-agents.zip",
+      "homepage": "https://github.com/mnriem/spec-kit-presets",
+      "documentation": "https://github.com/mnriem/spec-kit-presets/blob/main/copilot-sub-agents/README.md",
+      "license": "MIT",
+      "requires": {
+        "speckit_version": ">=0.2.0"
+      },
+      "provides": {
+        "templates": 0,
+        "commands": 8
+      },
+      "tags": [
+        "copilot",
+        "sub-agents",
+        "parallelism",
+        "performance"
       ]
     }
   }
