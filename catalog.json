@@ -1,8 +1,35 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-05-29T00:00:00Z",
+  "updated_at": "2026-07-24T00:00:00Z",
   "catalog_url": "https://raw.githubusercontent.com/mnriem/spec-kit-presets/main/catalog.json",
   "presets": {
+    "assess-ask-questions": {
+      "name": "Assess Ask Questions",
+      "id": "assess-ask-questions",
+      "version": "1.0.0",
+      "description": "Adds an interactive #askQuestions-style clarifying round to every stage of the assess extension. Before writing each artifact, the agent asks the user a focused batch of multiple-choice clarifying questions (Copilot CLI adapted).",
+      "author": "mnriem",
+      "repository": "https://github.com/mnriem/spec-kit-presets",
+      "download_url": "https://github.com/mnriem/spec-kit-presets/releases/download/assess-ask-questions-v1.0.0/assess-ask-questions.zip",
+      "homepage": "https://github.com/mnriem/spec-kit-presets",
+      "documentation": "https://github.com/mnriem/spec-kit-presets/blob/main/assess-ask-questions/README.md",
+      "license": "MIT",
+      "requires": {
+        "speckit_version": ">=0.9.0",
+        "extensions": ["assess"]
+      },
+      "provides": {
+        "templates": 0,
+        "commands": 5
+      },
+      "tags": [
+        "assess",
+        "clarifying-questions",
+        "askquestions",
+        "discovery",
+        "interactive"
+      ]
+    },
     "pirate": {
       "name": "Pirate Speak (Full)",
       "id": "pirate",

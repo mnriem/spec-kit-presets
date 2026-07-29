@@ -18,6 +18,7 @@ terminology, and structure without changing any tooling.
 | Preset | Description |
 |--------|-------------|
 | [aide-in-place](./aide-in-place/) | Adapts the AIDE extension workflow for in-place technology migrations (X → Y pattern) — adds migration objectives, verification gates, knowledge documents, and behavioral equivalence criteria |
+| [assess-ask-questions](./assess-ask-questions/) | Adds an interactive `#askQuestions`-style clarifying round to every stage of the assess extension — before writing each artifact the agent asks a focused batch of multiple-choice questions (Copilot CLI adapted) |
 | [copilot-sub-agents](./copilot-sub-agents/) | Adds sub-agent delegation instructions to all core commands, enabling parallel execution of independent steps via Copilot sub-agents (CLI and VS Code) |
 | [pirate](./pirate/) | Transforms all spec-kit output into pirate speak — specs become "Voyage Manifests", plans become "Battle Plans", tasks become "Crew Assignments" |
 
