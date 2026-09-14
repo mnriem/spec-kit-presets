@@ -3,7 +3,7 @@ schema_version: "1.0"
 preset:
   id: "niem"
   name: "NIEM Information Exchanges"
-  version: "1.0.0"
+  version: "1.0.1"
   description: "Adds evidence-based NIEM exchange modeling to the core, assess, and bugfix processes while preserving their commands, artifacts, and scope."
   author: "mnriem"
   repository: "https://github.com/mnriem/spec-kit-presets"
