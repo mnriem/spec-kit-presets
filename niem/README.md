@@ -11,7 +11,7 @@ In an initialized **Spec Kit >= 1.0.4** project with an established constitution
 ```bash
 specify extension add assess
 specify extension add bug
-specify preset add --dev /path/to/spec-kit-presets/niem
+specify preset add --from https://github.com/mnriem/spec-kit-presets/releases/download/niem-v1.0.1/niem.zip
 ```
 
 Skip `extension add` for extensions already installed; enable them if disabled.
@@ -78,11 +78,13 @@ validators, certify output, or rewrite existing artifacts on installation.
 Passing round-trip tests is not NIEM conformance. See [shared guidance and
 sources](templates/niem-guidance.md) and the [mapping template](templates/niem-mapping-template.md).
 
-Remove and reinstall after editing the local preset; `--dev` copies files.
 Higher-priority replacements can hide its guidance. Inspect with
 `specify preset resolve speckit.plan`.
 
 ## Development
+
+Install locally with `specify preset add --dev ./niem` from this repository's root.
+Remove and reinstall after editing; `--dev` copies files.
 
 From this repository's root, using a Python environment with supported
 `specify-cli` installed and `zip` available:
@@ -91,5 +93,5 @@ From this repository's root, using a Python environment with supported
 python -m unittest discover -s niem/tests -p 'test_niem_preset.py'
 ```
 
-Tests are excluded from release ZIPs. License: MIT; referenced NIEM resources
+Tests are excluded from release ZIPs. License: [MIT](LICENSE); referenced NIEM resources
 retain their own licenses.

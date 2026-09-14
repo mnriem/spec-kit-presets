@@ -114,8 +114,10 @@ class NiemPresetTests(unittest.TestCase):
         for relative in declared:
             with self.subTest(file=relative):
                 self.assertTrue((PRESET / relative).read_text(encoding="utf-8").strip())
-        self.assertIn(
-            f"/niem-v{self.manifest.version}/niem.zip", entry["download_url"]
+        self.assertEqual(
+            "https://github.com/mnriem/spec-kit-presets/releases/download/"
+            f"niem-v{self.manifest.version}/niem.zip",
+            entry["download_url"],
         )
 
     def test_all_core_and_extension_commands_are_wrapped(self):
@@ -142,6 +144,15 @@ class NiemPresetTests(unittest.TestCase):
         declared = {entry["name"].replace(".", "-") for entry in self.commands}
         self.assertTrue(documented)
         self.assertLessEqual(documented, declared)
+
+    def test_readme_release_url_matches_catalog(self):
+        catalog = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))
+        readme = (PRESET / "README.md").read_text(encoding="utf-8")
+        install = readme.split("## Install\n", 1)[1].split("\n## ", 1)[0]
+        self.assertEqual(
+            [f"specify preset add --from {catalog['presets']['niem']['download_url']}"],
+            re.findall(r"^specify preset add .+$", install, re.MULTILINE),
+        )
 
     def test_every_layer_composes_without_losing_base_contract(self):
         project = self.make_project()
@@ -287,11 +298,16 @@ class NiemPresetTests(unittest.TestCase):
         )
         with zipfile.ZipFile(archive) as package:
             self.assertIn("preset.yml", package.namelist())
+            self.assertIn("LICENSE", package.namelist())
+            license_text = (PRESET / "LICENSE").read_bytes()
+            self.assertEqual((ROOT / "pirate" / "LICENSE").read_bytes(), license_text)
+            self.assertEqual(license_text, package.read("LICENSE"))
             self.assertFalse(any(name.startswith("tests/") for name in package.namelist()))
             self.assertNotIn("DEMO.md", package.namelist())
         manager = PresetManager(project)
         installed = manager.install_from_zip(archive, "1.0.4")
         self.assertEqual("niem", installed.id)
+        self.assertEqual(self.manifest.version, installed.version)
         self.assertTrue((project / SHARED_GUIDANCE).is_file())
         self.assertIn(
             SHARED_GUIDANCE,

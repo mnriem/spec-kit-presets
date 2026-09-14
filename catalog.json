@@ -6,11 +6,11 @@
     "niem": {
       "name": "NIEM Information Exchanges",
       "id": "niem",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "description": "Adds evidence-based NIEM exchange modeling to the core, assess, and bugfix processes while preserving their commands, artifacts, and scope.",
       "author": "mnriem",
       "repository": "https://github.com/mnriem/spec-kit-presets",
-      "download_url": "https://github.com/mnriem/spec-kit-presets/releases/download/niem-v1.0.0/niem.zip",
+      "download_url": "https://github.com/mnriem/spec-kit-presets/releases/download/niem-v1.0.1/niem.zip",
       "homepage": "https://github.com/mnriem/spec-kit-presets",
       "documentation": "https://github.com/mnriem/spec-kit-presets/blob/main/niem/README.md",
       "license": "MIT",
