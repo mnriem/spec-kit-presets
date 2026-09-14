@@ -49,7 +49,7 @@ jobs:
         run: |
           cd "${{ steps.parse.outputs.preset_id }}"
           zip -r "../${{ steps.parse.outputs.preset_id }}.zip" . \
-            -x '.*' '__pycache__/*'
+            -x '.*' '__pycache__/*' 'tests/*'
 
       - name: Generate release notes
         id: notes
