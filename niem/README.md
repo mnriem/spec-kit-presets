@@ -83,7 +83,8 @@ Higher-priority replacements can hide its guidance. Inspect with
 
 ## Development
 
-Install locally with `specify preset add --dev ./niem` from this repository's root.
+From an initialized consumer project, install local edits with
+`specify preset add --dev /path/to/spec-kit-presets/niem`.
 Remove and reinstall after editing; `--dev` copies files.
 
 From this repository's root, using a Python environment with supported
